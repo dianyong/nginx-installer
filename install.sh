@@ -18,8 +18,8 @@ gmake
 gmake install
 cd ..
 rm -rf ngx_openresty-1.7.7.1
-cp -f conf/nginx.conf /usr/local/openresty/nginx/conf/
-cp -f conf/proxy.conf /usr/local/openresty/nginx/conf/
+cp -f nginx.conf /usr/local/openresty/nginx/conf/
+cp -f proxy.conf /usr/local/openresty/nginx/conf/
 
 killall -0 nginx
 if [[ $? -eq 0 ]]; then
