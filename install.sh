@@ -7,7 +7,7 @@ if [[ ! -d /tmp/nginx-installer ]]; then
     cd /tmp/nginx-installer
 else
     cd /tmp/nginx-installer
-    git fetch
+    git pull
 fi
 
 cd resources
