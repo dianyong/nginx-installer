@@ -21,4 +21,9 @@ rm -rf ngx_openresty-1.7.7.1
 cp -f conf/nginx.conf /usr/local/openresty/nginx/conf/
 cp -f conf/proxy.conf /usr/local/openresty/nginx/conf/
 
-/usr/local/openresty/nginx/sbin/nginx
+killall -0 nginx
+if [[ $? -eq 0 ]]; then
+    /usr/local/openresty/nginx/sbin/nginx -s reload
+else
+    /usr/local/openresty/nginx/sbin/nginx
+fi
